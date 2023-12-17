@@ -18,14 +18,14 @@ import "math/big"
 import "github.com/sirgallo/vdf"
 
 
-const N_BASE = <int64-iterations>
+const N_BASE = int64(<num-of-base-iterations>)
 const P = "<string-representation-of-1024-bit-prime>"
 const GENESIS_INPUT = "<string-representation-of-1024-bit-prime>"
 
 
 func main() {
-	p = new(big.Int)
-	p.SetString(P, 16)
+  p = new(big.Int)
+  p.SetString(P, 16)
 
   gIn := new(big.Int)
   gIn.SetString(GENESIS_INPUT, 16)

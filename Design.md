@@ -14,8 +14,8 @@ For computing the `vdf`, repeated squaring is chosen. No additional hashing is d
 
 $$
 \begin{align}
-  &P = \text{a large prime number that defines the group}
-  &N_{base} = \text{the base number of squaring operations to use} \\
+  &P = \text{a large prime number that defines the group} \\
+  &N_{base} = \text{the base number of squaring operations to use}
 \end{align}
 $$
 
