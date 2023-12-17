@@ -20,7 +20,7 @@ import "github.com/sirgallo/vdf"
 
 const N_BASE = int64(<num-of-base-iterations>)
 const P = "<string-representation-of-1024-bit-prime>"
-const GENESIS_INPUT = "<string-representation-of-1024-bit-prime>"
+const GENESIS_INPUT = "<string-representation-of-1024-bit-input>"
 
 
 func main() {
