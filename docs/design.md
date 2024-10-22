@@ -1,16 +1,16 @@
-# VDF Design
+# vdf design
 
 
-## Overview
+## overview
 
 `Verifiable Delay Functions` are a relatively new cryptographic primitive that take a predictable amount of time to compute, even on multi-core systems, but are easily verifiable by viewers of the result.
 
 For computing the `vdf`, repeated squaring is chosen. No additional hashing is done on the VDF to apply randomness for security. When a entity accumulates successful computations, the difficulty of solving the next vdf increases. This is done to give other entities in a distributed network a higher chance to submit the next output in the sequence and introduces a built in rate limiting feature. Once a different entity has successfully generated the next VDF in the sequence, the entity being rate limited has the total accumulated successful computations set to $0$
 
 
-## Computation
+## computation
 
-### Constants
+### constants
 
 $$
 \begin{align}
@@ -19,7 +19,7 @@ $$
 \end{align}
 $$
 
-### Variables
+### variables
 
 $$
 \begin{align}
@@ -32,7 +32,7 @@ $$
 \end{align}
 $$
 
-### Generating Output
+### generating output
 
 $N_{s}$ is calculated by taking $N_{base}$, where after each sequential successul write to the state machine causes a gradual growth in the difficulty of the vdf.
 
@@ -53,7 +53,7 @@ $$
 The value for $N_{base}$ is a major determinant in the total time to solve the `vdf`, so for longer delays a larger value should be selected to increase the total number of iterations required to compute the vdf output.
 
 
-### Generating Proof
+### generating proof
 
 The [Wesolowski Proof](https://eprint.iacr.org/2018/623.pdf) has been selected to generate the proof for the computed output from the `vdf`. The proof generates a partial computation of the computed output, so any entity verifying the output only needs to compute a portion of the output based on the input instead of recomputing the entire output again.
 
@@ -64,7 +64,7 @@ $$
 $$
 
 
-### Verification
+### verification
 
 $$
 \begin{align}
